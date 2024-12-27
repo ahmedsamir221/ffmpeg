@@ -25,7 +25,7 @@ public class FFMpeg extends CordovaPlugin {
                     if (returnCode == RETURN_CODE_SUCCESS)
                         callbackContext.success(result);
                     else
-                        callbackContext.error("Error Code: " + returnCode);
+                        callbackContext.error("Error Code: " + returnCode + "," + Config.getLastCommandOutput());
                 }
             });
             return true;
